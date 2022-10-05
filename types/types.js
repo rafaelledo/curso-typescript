@@ -112,7 +112,7 @@ function fail(msg) {
 }
 const product = {
     name: 'Sabão',
-    price: -1,
+    price: 8,
     validateProduct() {
         if (!this.name || this.name.trim().length == 0) {
             fail('Precisa ter um nome');
@@ -123,3 +123,21 @@ const product = {
     }
 };
 product.validateProduct();
+// # Optional values with null
+let height = 12;
+// height = null
+let optionalHeight = 12;
+optionalHeight = null;
+const contact1 = {
+    name: 'Fulano',
+    tel1: '9575743671',
+    tel2: null
+};
+console.log(contact1.name);
+console.log(contact1.tel1);
+console.log(contact1.tel2);
+let canBeNull = null; // any
+// canBeNull = 12
+console.log(canBeNull);
+// canBeNull = 'abc'
+console.log(canBeNull);
