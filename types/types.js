@@ -1,35 +1,35 @@
 "use strict";
-// 1-string
+// # string
 let personName = 'João';
 console.log(personName);
 // personName = 28
-// 2-numbers
+// # numbers
 let age = 27;
 // age = 'Ana'
 age = 27.5;
 console.log(age);
-// 3-boolean
+// # boolean
 let haveHobbies = false;
 // haveHobbies = 1
 console.log(haveHobbies);
-// 4-explicit types
+// # explicit types
 let myAge;
 myAge = 27;
 console.log(typeof myAge);
 // myAge = '27'
-// 5-array
+// # array
 let hobbies = ["Cozinhar", "Praticar Esportes"];
 console.log(hobbies[0]);
 console.log(typeof hobbies);
 hobbies = [100, 200, 300];
 // hobbies = 100
 console.log(hobbies);
-// 6-tuplas
+// # tuplas
 let adress = ["Av Principal", 99, ""];
 console.log(adress);
 adress = ["Rua Importante", 1260, "Bloco C"];
 console.log(adress);
-// 7-enums
+// # enums
 var Color;
 (function (Color) {
     Color[Color["Cinza"] = 0] = "Cinza";
@@ -38,12 +38,12 @@ var Color;
 })(Color || (Color = {}));
 let myColor = Color.Verde;
 console.log(myColor);
-// 8-any
+// # any
 let car = 'BMW';
 console.log(car);
 car = { marca: 'BMW', ano: 2019 };
 console.log(car);
-// 9-functions
+// # functions
 function returnMyName() {
     // return myAge
     return personName;
@@ -59,14 +59,14 @@ function multiply(numA, numB) {
 }
 // console.log(multiply(2, 'Bia'))
 console.log(multiply(2, 2));
-// 10-function type
+// # function type
 let calculate;
 // calculate = sayHello
 // calculate()
 // calculate = {}
 calculate = multiply;
 console.log(calculate(5, 6));
-// 11-objects
+// # objects
 let user = {
     name: 'João',
     age: 27
@@ -82,3 +82,20 @@ user = {
     age: 31
 };
 console.log(user);
+// # Object types challenge
+let employee = {
+    supervisors: [
+        'Antonio',
+        'Roberta'
+    ],
+    toClockIn: (hour) => {
+        return hour <= 8 ? 'Ponto normal' : 'Fora do horário';
+    }
+};
+console.log(employee.supervisors);
+console.log(employee.toClockIn(8));
+console.log(employee.toClockIn(9));
+// employee = {}
+// # Union types
+let score = 10;
+console.log(`Minha nota é ${score}`);
