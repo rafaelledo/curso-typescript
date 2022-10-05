@@ -124,3 +124,31 @@ console.log(employee.toClockIn(9))
 // # Union types
 let score: number | string = 10
 console.log(`Minha nota é ${score}`)
+
+// ## Checking Types
+let value = 30
+
+if (typeof value === "number") {
+  console.log("É um number!")
+} else {
+  console.log(typeof value)
+}
+
+function fail(msg: string): never {
+  throw new Error(msg)
+}
+
+const product = {
+  name: 'Sabão',
+  price: -1,
+  validateProduct() {
+    if (!this.name || this.name.trim().length == 0) {
+      fail('Precisa ter um nome')
+    }
+    if (this.price <= 0) {
+      fail('Preço inválido')
+    }
+  }
+}
+
+product.validateProduct()
