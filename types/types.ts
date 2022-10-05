@@ -19,3 +19,16 @@ let myAge: number
 myAge = 27
 console.log(typeof myAge)
 // myAge = '27'
+
+// array
+let hobbies: any[] = ["Cozinhar", "Praticar Esportes"]
+console.log(hobbies[0])
+console.log(typeof hobbies)
+hobbies = [100, 200, 300]
+// hobbies = 100
+console.log(hobbies)
+
+// tuplas
+let adress: [string, number, string] = ["Av Principal", 99, ""]
+console.log(adress)
+adress = ["Rua Importante", 1260, "Bloco C"]

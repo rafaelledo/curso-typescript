@@ -17,3 +17,14 @@ let myAge;
 myAge = 27;
 console.log(typeof myAge);
 // myAge = '27'
+// array
+let hobbies = ["Cozinhar", "Praticar Esportes"];
+console.log(hobbies[0]);
+console.log(typeof hobbies);
+hobbies = [100, 200, 300];
+// hobbies = 100
+console.log(hobbies);
+// tuplas
+let adress = ["Av Principal", 99, ""];
+console.log(adress);
+adress = ["Rua Importante", 1260, "Bloco C"];
