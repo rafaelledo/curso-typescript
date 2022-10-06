@@ -141,3 +141,16 @@ let canBeNull = null; // any
 console.log(canBeNull);
 // canBeNull = 'abc'
 console.log(canBeNull);
+let bankAccount = {
+    balance: 3456,
+    deposit(amount) {
+        this.balance += amount;
+    }
+};
+let accountHolder = {
+    name: 'Ana Silva',
+    bankAccount: bankAccount,
+    phones: ['34567890', '98765432']
+};
+accountHolder.bankAccount.deposit(3000);
+console.log(accountHolder);

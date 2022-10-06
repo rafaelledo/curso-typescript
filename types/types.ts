@@ -101,8 +101,8 @@ console.log(user)
 
 // # Alias
 type Employee = {
-  supervisors: string[], 
-  toClockIn: (hour: number) => string 
+  supervisors: string[],
+  toClockIn: (hour: number) => string
 }
 
 // # Object types challenge
@@ -182,3 +182,31 @@ let canBeNull = null // any
 console.log(canBeNull)
 // canBeNull = 'abc'
 console.log(canBeNull)
+
+// Challenge
+type BankAccount = {
+  balance: number,
+  deposit: (amount: number) => void
+}
+
+type AccountHolder = {
+  name: string,
+  bankAccount: BankAccount,
+  phones: string[]
+}
+
+let bankAccount: BankAccount = {
+  balance: 3456,
+  deposit(amount: number) {
+    this.balance += amount
+  }
+}
+
+let accountHolder: AccountHolder = {
+  name: 'Ana Silva',
+  bankAccount: bankAccount,
+  phones: ['34567890', '98765432']
+}
+
+accountHolder.bankAccount.deposit(3000)
+console.log(accountHolder)
