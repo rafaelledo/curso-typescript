@@ -154,3 +154,4 @@ let accountHolder = {
 };
 accountHolder.bankAccount.deposit(3000);
 console.log(accountHolder);
+//# sourceMappingURL=types.js.map
