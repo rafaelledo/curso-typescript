@@ -13,3 +13,13 @@ function sum(a: any, b: any) {
 let anything
 anything = 12
 anything = 'abc'
+
+function greet (isMorning: boolean): string {
+  let salute: string
+  if (isMorning) {
+    salute = 'Good morning!'
+  } else {
+    salute = 'Have a good life!'
+  }
+  return salute
+}
