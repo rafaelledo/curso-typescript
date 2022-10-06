@@ -10,4 +10,14 @@ function sum(a, b) {
 let anything;
 anything = 12;
 anything = 'abc';
+function greet(isMorning) {
+    let salute;
+    if (isMorning) {
+        salute = 'Good morning!';
+    }
+    else {
+        salute = 'Have a good life!';
+    }
+    return salute;
+}
 //# sourceMappingURL=compiler.js.map
