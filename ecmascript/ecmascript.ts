@@ -1,4 +1,4 @@
-// let & const
+// # let & const
 // console.log(canI)
 // var canI = '?' // hoisting
 // let canI = '?' // hoisting
@@ -21,3 +21,36 @@ function reveal() {
 }
 reveal()
 console.log(secret)
+
+// # Arrow function
+const add = function (n1: number, n2: number): number {
+  return n1 + n2
+}
+console.log(add(2, 2))
+
+const subtract = (n1: number, n2: number): number => n1 - n2
+console.log(subtract(3, 2))
+
+const saudacao = () => console.log("Olá!")
+saudacao()
+
+const falarCom = (pessoa: string) => console.log('Ola' + pessoa)
+falarCom('João')
+
+// # this
+function normalWithThis() {
+  // console.log(this)
+}
+
+const normalWithThisSpecial = normalWithThis.bind(2)
+ 
+// normalWithThis()
+normalWithThisSpecial()
+
+// const arrowWithThis = () => console.log(this)
+
+console.log(this)
+// arrowWithThis()
+
+// const arrowWithThisSpecial = arrowWithThis.bind(2)
+// arrowWithThisSpecial()
